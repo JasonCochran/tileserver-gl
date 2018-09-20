@@ -26,3 +26,4 @@ RUN apt-get -qq update \
 RUN mkdir -p /usr/src/app
 COPY / /usr/src/app
 RUN cd /usr/src/app && npm install --production
+RUN cd /usr/src/app/node_modules/tileserver-gl-styles/styles && git clone https://github.com/JasonCochran/dark-matter-gl-style && cd dark-matter-gl-style && git pull
